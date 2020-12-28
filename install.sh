@@ -67,4 +67,4 @@ docker start portainer-ce
 echo "Started portainer!"
 echo "-----"
 echo "You can access the Portainer GUI at:"
-echo "$[IP_ADDRESS}:${PORT}"
+echo "$[IP_ADDRESS}:${PORTAINER_PORT}"
