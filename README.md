@@ -1,3 +1,5 @@
+# Install script
+
 Run the script with:
 
     bash <(curl -s https://raw.githubusercontent.com/marinofranz/portainer-installer/main/install.sh)
@@ -5,5 +7,17 @@ Run the script with:
 Run the **BETA** script with:
 
     bash <(curl -s https://raw.githubusercontent.com/marinofranz/portainer-installer/beta/install.sh)
+
+BETA contains features that have not been tested. Use at your own risk.
+
+# Uninstall script
+
+Run the script with:
+
+    bash <(curl -s https://raw.githubusercontent.com/marinofranz/portainer-installer/main/uninstall.sh)
+
+Run the **BETA** script with:
+
+    bash <(curl -s https://raw.githubusercontent.com/marinofranz/portainer-installer/beta/uninstall.sh)
 
 BETA contains features that have not been tested. Use at your own risk.
