@@ -57,7 +57,7 @@ docker volume create portainer_data
 echo "What port would you like the Portainer GUI to run on?"
 read PORTAINER_PORT
 
-docker run -d -p 9000:9000 -p $PORTAINER_PORT:8000 --name portainer-ce --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /home/docker/portainer:/data portainer/portainer-ce
+docker run -d -p $PORTAINER_PORT:9000 -p 8000:8000 --name portainer-ce --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /home/docker/portainer:/data portainer/portainer-ce
 
 echo "Installed Portainer!"
 echo "Starting Portainer!"
@@ -67,4 +67,4 @@ docker start portainer-ce
 echo "Started portainer!"
 echo "-----"
 echo "You can access the Portainer GUI at:"
-echo $IP_ADDRESS:$PORT
+echo "$[IP_ADDRESS}:${PORT}"
