@@ -13,3 +13,5 @@ echo "If you would NOT like to delete Portainer data, please exit out of this sc
 sleep 10
 
 sudo rm -r portainer
+
+echo "Portainer and it's data has been uninstalled!"
