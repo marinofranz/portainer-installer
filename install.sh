@@ -67,4 +67,5 @@ docker start portainer-ce
 echo "Started portainer!"
 echo "-----"
 echo "You can access the Portainer GUI at:"
-echo "$[IP_ADDRESS}:${PORTAINER_PORT}"
+echo "http://$[IP_ADDRESS}:${PORTAINER_PORT}"
+echo "You will be prompted to setup the initial administrator user account"
