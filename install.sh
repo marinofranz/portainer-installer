@@ -46,13 +46,18 @@ function install_docker {
 
 echo "Running the installer..."
 
+sudo apt-get update
+
 IP_ADDRESS=$(hostname -I | cut -f1 -d' ')
 
 install_docker
 
 docker volume create portainer_data
 
-docker run -d -p 9000:9000 -p 8000:8000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /home/docker/portainer:/data portainer/portainer
+echo "What port would you like the Portainer GUI to run on?"
+read PORTAINER_PORT
+
+docker run -d -p $PORTAINER_PORT:9000 -p 8000:8000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /home/docker/portainer:/data portainer/portainer
 
 echo "Installed Portainer!"
 echo "Starting Portainer!"
@@ -62,4 +67,4 @@ docker start portainer
 echo "Started portainer!"
 echo "-----"
 echo "You can access the Portainer GUI at:"
-echo "${IP_ADDRESS}:9000"
+echo "${IP_ADDRESS}:$[PORT}"
